@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+}
+body {
+    background: linear-gradient(to bottom, rgb(77, 66, 173) , rgb(4, 16, 53));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Vollkorn', serif;
+}
+h1{
+    font-size: 50pt;
+    margin-bottom: 100px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: none 2px;
+    border-radius: 5%;
+    box-shadow: 0 0 500px black;
+    width: 400px;
+    height: 400px;
+    font-size: xx-large;
+}
+label {
+    text-shadow: 0 2px 20px black;
+}
+
+form input {
+    width: 300px;
+    height: 20px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    transition: 1s;
+    color: rgb(4, 16, 53);
+    box-shadow: 0 0 150px black;
+}
+form input:focus {
+    border-radius: 5px;
+    width: 280px;
+}
+button{
+    width: 100px;
+    font-weight: bold;
+    padding: 8px;
+    transition: 0.5s;
+    color: #fff;
+    background: none;
+    border: solid 1px;
+}
+button:hover{
+    border: none;
+    color:rgb(4, 16, 53);
+    background: #fff;
+    box-shadow: 0 0 6px black;
+}
+
+.error {
+    display: none;
+    color: red;
+    background: none;
+    text-align: center;
+    font-size: 18pt;
+}

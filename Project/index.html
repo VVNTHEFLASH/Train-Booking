@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Train Ticket Booking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- let just focus on booking only -->
+        <!-- what we need guess -->
+        <!-- We A Train Details -->
+        <!-- from and to details -->
+        <!-- date and timing -->
+        <!-- an <button></button> -->
+        <!-- then after submit we need the printed Ticket -->
+        <div class="header">
+            <h1>BLUE TRAIN TICKET BOOKING</h1>
+            <div>
+                <img src="assets/train.svg" alt="logo" height="50px">
+            </div>
+        </div>
+        <div class="form">
+            <!-- <form> -->
+                <!-- lets create radio btn for selecting train -->
+                <div class="radio-btn">
+                    <label id="bold">Train Type</label><br>
+                    <label id="nor-train">Normal Train</label><input type="radio" name="train" value="1">
+                    <label id="sp-train">Super-Fast Train</label><input type="radio" name="train" value="2">
+                    <label id="exp-train">Express Train</label><input type="radio" name="train" value="3">
+                </div>
+                <!-- lets create destination -->
+                <div class="destination">
+                    <label id="bold">Destination</label><br>
+                    <label>From </label>
+                        <select name="destination" id="from">
+                            <option value="AVADI" name='from' selected>AVADI</option>
+                            <option value="AMBATTUR" name='from'>AMBATTUR</option>
+                            <option value="VILLIVAKKAM" name='from'>VILLIVAKKAM</option>
+                            <option value="PERAMBUR" name='from'>PERAMBUR</option>
+                            <option value="CHENNAI-CENTRAL" name='from'>CHENNAI CENTRAL</option>
+                        </select>
+                    <label>To</label>
+                    <select name="destination" id="to">
+                        <option value="AVADI" name='to'>AVADI</option>
+                        <option value="AMBATTUR" name='to' selected>AMBATTUR</option>
+                        <option value="VILLIVAKKAM" name='to'>VILLIVAKKAM</option>
+                        <option value="PERAMBUR" name='to'>PERAMBUR</option>
+                        <option value="CHENNAI-CENTRAL" name='to'>CHENNAI CENTRAL</option>
+                    </select>
+                    <br><br>
+                </div>
+                <!-- lets create date and time -->
+                <div>
+                    <label>Date <input type="date" name="date" id="date" value="2021-10-01"></label>
+                    <label>Time <input type="time" id="time" value="00:00"></label><br><br>
+                </div>
+                <div>
+                    <label><input type="submit" value="Book Ticket" onclick="generateTicket()"></label>
+                </div>
+                <div id="Generate-Ticket">
+
+                </div>
+            <!-- </form> -->
+        </div>
+
+
+
+
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
