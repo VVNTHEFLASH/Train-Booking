@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background: white;
+    border: black solid;
+}
+.head{
+    background: rgb(65, 41, 197);
+    padding: 10px;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.head>h2{
+    margin-left: 20px;
+    color: white;
+}

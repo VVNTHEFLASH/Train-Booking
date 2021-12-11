@@ -74,5 +74,6 @@ button:hover{
     color: red;
     background: none;
     text-align: center;
-    font-size: 18pt;
+    font-size: 10pt;
+    font-weight: bold;
 }

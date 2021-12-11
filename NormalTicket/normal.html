@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal Train</title>
+    <link rel="stylesheet" href="normal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>Normal Booking</h2>
+        </div>
+        <div class="ins-box">
+            <ul>
+                <li>Use this option if you are outside station premises/Railway track.</li>
+                <li>Set your device GPS to high accuracy mode.</li>
+                <li>No refunds will be provided after cancellation</li>
+            </ul>
+        </div>
+        <form>
+                <!-- lets create destination -->
+                <div class="destination">
+                    <label id="bold">Destination</label><br>
+                    <label>Depart From </label>
+                        <select name="destination" id="from">
+                            <option value="AVADI" name='from'>AVADI</option>
+                            <option value="AMBATTUR" name='from'>AMBATTUR</option>
+                            <option value="VILLIVAKKAM" name='from'>VILLIVAKKAM</option>
+                            <option value="PERAMBUR" name='from'>PERAMBUR</option>
+                            <option value="CHENNAI-CENTRAL" name='from'>CHENNAI CENTRAL</option>
+                        </select>
+                    <label>Going To</label>
+                    <select name="destination" id="to">
+                        <option value="AVADI" name='to'>AVADI</option>
+                        <option value="AMBATTUR" name='to'>AMBATTUR</option>
+                        <option value="VILLIVAKKAM" name='to'>VILLIVAKKAM</option>
+                        <option value="PERAMBUR" name='to'>PERAMBUR</option>
+                        <option value="CHENNAI-CENTRAL" name='to'>CHENNAI CENTRAL</option>
+                    </select>
+                </div>
+        </form>
+    </div>
+</body>
+</html>
