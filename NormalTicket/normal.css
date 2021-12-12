@@ -11,7 +11,11 @@ body{
 }
 .container{
     background: white;
-    border: black solid;
+    height: 300px;
+    width: 600px;
+    box-shadow: 0 0 6px gray;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .head{
     background: rgb(65, 41, 197);
@@ -23,4 +27,42 @@ body{
 .head>h2{
     margin-left: 20px;
     color: white;
+}
+.destination{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.destination>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+select{
+    outline: none;
+    border: none;
+    border-bottom:  solid 2px rgb(65, 41, 197);
+    padding: 10px;
+}
+option{
+    padding: 10px;
+}
+#nextButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#next{
+    background: rgb(65, 41, 197);
+    border: none;
+    padding: 5px;
+    width: 60px;
+    color: #fff;
+    outline: none;
+    transition: 1s;
+    font-weight: bold;
+}
+#next:hover{
+    color: rgb(65, 41, 197);
+    background: #fff;
+    border: rgb(65, 41, 197) solid 2px;
 }

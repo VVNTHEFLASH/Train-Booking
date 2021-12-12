@@ -22,16 +22,18 @@
         <form>
                 <!-- lets create destination -->
                 <div class="destination">
-                    <label id="bold">Destination</label><br>
-                    <label>Depart From </label>
+                    <div>
+                    <label>Depart From </label><br>
                         <select name="destination" id="from">
                             <option value="AVADI" name='from'>AVADI</option>
                             <option value="AMBATTUR" name='from'>AMBATTUR</option>
                             <option value="VILLIVAKKAM" name='from'>VILLIVAKKAM</option>
                             <option value="PERAMBUR" name='from'>PERAMBUR</option>
                             <option value="CHENNAI-CENTRAL" name='from'>CHENNAI CENTRAL</option>
-                        </select>
-                    <label>Going To</label>
+                        </select><br>
+                    </div>
+                    <div>
+                    <label>Going To</label><br>
                     <select name="destination" id="to">
                         <option value="AVADI" name='to'>AVADI</option>
                         <option value="AMBATTUR" name='to'>AMBATTUR</option>
@@ -39,8 +41,13 @@
                         <option value="PERAMBUR" name='to'>PERAMBUR</option>
                         <option value="CHENNAI-CENTRAL" name='to'>CHENNAI CENTRAL</option>
                     </select>
+                    </div>
+                </div>
+                <div id="nextButton">
+                    <button type="submit" id="next" onsubmit="getFare()">Next</button>
                 </div>
         </form>
     </div>
+    <script src="normal.js"></script>
 </body>
 </html>
