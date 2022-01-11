@@ -12,3 +12,9 @@ var express = document.getElementById('express');
 normal.onclick = () => {
     window.location.href = "../NormalTicket/normal.html";
 }
+superfast.onclick = () => {
+    window.location.href = "../NormalTicket/normal.html";
+}
+express.onclick = () => {
+    window.location.href = "../NormalTicket/normal.html";
+}
