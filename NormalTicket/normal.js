@@ -14,6 +14,11 @@ function showTab(n) {
   }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
+    //redirect to new page
+        var submit = document.getElementById('nextBtn');
+
+        submit.addEventListener("click", generateTicketPage)
+
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
@@ -70,4 +75,8 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class on the current step:
   x[n].className += " active";
+}
+
+function generateTicketPage() {
+        window.location.href = "form1.html";
 }

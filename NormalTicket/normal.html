@@ -21,7 +21,8 @@
         </div>
         <form id="regForm">
                 <!-- lets create destination -->
-                <div class="destination tab">
+                <div class="tab">
+                    <div class="destination">
                     <div>
                     <label>Depart From </label><br>
                         <select name="destination" id="from">
@@ -42,15 +43,18 @@
                         <option value="CHENNAI-CENTRAL" name='to'>CHENNAI CENTRAL</option>
                     </select>
                     </div>
+                    </div>
                 </div>
-                <div class="fare tab">
+                <div class="tab">
+                    <div class="fare">
                     <div>
-                        <label>Adult</label><br><input type="number"><br>
+                        <label>Adult</label><br><input type="number" name="" id="" oninput="this.className = ''" value="1"><br>
                         <label>Ticket Type</label><br><input type="checkbox"> Return 
                     </div>
                     <div>
-                        <label>Child</label><br><input type="number" name="" id="" oninput="this.className = ''"><br>
-                        <label>Class</label><br><input type="checkbox" name="" id="" oninput="this.className = ''"> First(FC)
+                        <label>Child</label><br><input type="number" name="" id="" oninput="this.className = ''" value="0"><br>
+                        <label>Class</label><br><input type="checkbox" name="" id=""> First(FC)
+                    </div>
                     </div>
                 </div>
                 

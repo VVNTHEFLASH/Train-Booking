@@ -21,11 +21,14 @@ body{
 }
 .container{
     background: white;
-    height: 400px;
+    height: 300px;
     width: 600px;
     box-shadow: 0 0 6px gray;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+}
+.tab{
+    display: none;
 }
 .head{
     background: rgb(65, 41, 197);
@@ -88,9 +91,7 @@ option{
 
 
 /* Multipage form */
-.tab{
-    display: none;
-}
+
 
 #prevBtn{
     background-color: rgb(65, 41, 197);
@@ -106,7 +107,7 @@ option{
     border: rgb(65, 41, 197) solid 2px;
 }
 
-.step{
+/* .step{
 
 }
 
@@ -116,4 +117,4 @@ option{
 
 .step.finish{
 
-}
+} */
