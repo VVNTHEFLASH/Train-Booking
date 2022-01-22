@@ -1,82 +1,112 @@
+function bookTickets() {
+  // Get values first
+  //from des  
+  let from = document.getElementById('from');
+  let selectFrom = from.options[from.selectedIndex].value;
+  //to des
+  let to = document.getElementById('to');
+  let selectTo = to.options[to.selectedIndex].value;
 
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
+  // Adult and child value
+  // Remember about parseInt to Math
+  let adult = document.getElementById("adult").value;
+  let child = document.getElementById("child").value;
 
-function showTab(n) {
-  // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  //... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
+  // Class selection radio button
+  let Class = document.getElementsByName("class");
+  var select;
+  for(let i = 0;i < Class.length; i++){
+      if(Class[i].checked) {
+        select = parseInt(Class[i].value);
+      }
   }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-    //redirect to new page
-        var submit = document.getElementById('nextBtn');
-
-        submit.addEventListener("click", generateTicketPage)
-
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n)
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form...
-  if (currentTab >= x.length) {
-    // ... the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
+      if(select === 1){
+        localStorage.setItem("class",select);
+      }
+      else if(select === 2) {
+        localStorage.setItem("class",select);      
+      }
+  //Return Select
+  let Return = document.getElementsByName('ret');
+  let selectReturn;
+  for(let i = 0;i < Return.length;i++) {
+    if(Return[i].checked) {
+      selectReturn = parseInt(Return[i].value);
     }
   }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
+      if(selectReturn === 1) {
+        localStorage.setItem("return",selectReturn);
+      }
+      else if(selectReturn === 0) {
+        localStorage.setItem("return", selectReturn);
+      }
+
+
+      // local storage set items
+  localStorage.setItem("from",selectFrom);
+  localStorage.setItem("to",selectTo);
+  localStorage.setItem("adult",adult);
+  localStorage.setItem("child",child);
+
 }
 
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
+function storedData() {
+  let $from = localStorage.getItem("from");
+  let $to = localStorage.getItem("to")
+  let $A = parseInt(localStorage.getItem("adult"));
+  let $B = parseInt(localStorage.getItem("child"));
+  let $C = parseInt(localStorage.getItem("class"));
+  let $R = localStorage.getItem("return");
+
+  // console.log($from,$to,$A,$B,$C,$R);
+  var total = 0;
+  // price
+  let A = 10 //If A = 1 then price = 10
+  let C = 5 //If C = 2 then price = 5
+  // class price
+  //add 10 extra for firstclass
+  // for second class add 0 or nothing
+  let FC = 10 //remember to FC to all adults and childs if selected
+  let SC = 0
+
+  // Return price
+  let JR = total * 2;
+  let NR = total;
+
+
+  // cprice is Class price
+  var cPrice = 0;
+  if($C == 1) {
+    cPrice = FC;
   }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
+  else if($C == 2){
+    cPrice = SC;
+  }
+  // console.log(cPrice);
+  var travelers = (($A * A)+($A * cPrice)) + (($B * C) + ($B * cPrice));
+  // console.log(travelers);
+  if($R == 1) {
+    total = travelers * 2;
+  }
+  else if($R == 0) {
+    total = travelers;
+
+  }
+  localStorage.setItem("total",total)
+}
+storedData();
+//back page
+const backBtn = document.getElementById("backbtn");
+backBtn.onclick = backPage;
+
+function backPage() {
+  window.location.href = ".././menu/menu.html";
 }
 
-function generateTicketPage() {
-        window.location.href = "form1.html";
+const submitBtn = document.getElementById("BookNow");
+submitBtn.onclick = function() { submitPage() };
+
+function submitPage() {
+  bookTickets();
+  window.location.href = "/ticket.html";
 }

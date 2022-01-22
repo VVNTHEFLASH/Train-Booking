@@ -1,120 +1,97 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: white;
 }
-.ins-box>ul>li{
-    list-style: none;
-}
-.ins-box>ul{
-    margin: 20px 0;
-}
-.ins-box{
-    margin: 20px 50px;
-    box-shadow: 0 0 6px grey;
+body::before{
+    content: "";
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.4;
+    background-image: url('BTT.svg');
+    background-repeat: no-repeat;
+    background-size: 1000px ;
+    z-index: -1;
 }
 .container{
-    background: white;
-    height: 300px;
-    width: 600px;
-    box-shadow: 0 0 6px gray;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border: solid rgb(65, 41, 197) 6px;
+    background: gainsboro;
+    border-radius: 1%;
 }
-.tab{
-    display: none;
-}
-.head{
+.header{
     background: rgb(65, 41, 197);
-    padding: 10px;
-    width: 100%;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-.head>h2{
-    margin-left: 20px;
     color: white;
+    display: flex;
+    justify-content: space-between;
 }
-.destination{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.header>h1{
+    margin-left: 10px;
 }
-.destination>div{
+.header>button{
+    background: white;
+    color: rgb(65, 41, 197);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+}
+.NormalForm{
+    height: 70vh;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
 }
-select{
-    outline: none;
+form>div{
+    padding: 10px;
+    border-radius: 5px;
+    background: white;
+}
+#BookNow{
     border: none;
-    border-bottom:  solid 2px rgb(65, 41, 197);
-    padding: 10px;
-}
-option{
-    padding: 10px;
-}
-#nextButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-#nextBtn{
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
     background: rgb(65, 41, 197);
+    padding: 8px;
+}
+#BookNow:hover, #backbtn:hover{
+    color: #000;
+}
+#from, #to {
     border: none;
-    padding: 5px;
-    width: 60px;
-    color: #fff;
-    outline: none;
+    padding: 8px;
     font-weight: bold;
-}
-#nextBtn:hover{
-    color: rgb(65, 41, 197);
-    background: #fff;
-    border: rgb(65, 41, 197) solid 2px;
-}
-.fare{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-}
-.fare>div{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* Multipage form */
-
-
-#prevBtn{
-    background-color: rgb(65, 41, 197);
-    color: #fff;
     outline: none;
-    border: none;
+    background: royalblue;
+    color: #fff;
+}
+input[type = "number"]{
+    color: #fff;
     padding: 5px;
     font-weight: bold;
+    width: 35px;
+    border: none;
+    background: royalblue;
 }
-#prevBtn:hover{
-    color: rgb(65, 41, 197);
-    background: #fff;
-    border: rgb(65, 41, 197) solid 2px;
+label{
+    color: royalblue;
+    font-weight: bold;
 }
-
-/* .step{
-
-}
-
-.step.active {
-
-}
-
-.step.finish{
-
-} */
