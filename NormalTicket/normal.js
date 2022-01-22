@@ -103,10 +103,10 @@ function backPage() {
   window.location.href = ".././menu/menu.html";
 }
 
-const submitBtn = document.getElementById("BookNow");
-submitBtn.onclick = function() { submitPage() };
+// const submitBtn = document.getElementById("BookNow");
+// submitBtn.onclick = function() { submitPage() };
 
 function submitPage() {
   bookTickets();
-  window.location.href = "/ticket.html";
+  window.location.href = "./ticket.html";
 }

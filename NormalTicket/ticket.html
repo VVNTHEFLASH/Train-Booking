@@ -5,13 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generated Ticket</title>
+    <link rel="stylesheet" href="ticket.css">
 </head>
 <body>
     <header>
         <p>This Page Get Reset in few minutes</p>
     </header>
-    <div class="TicketPage">
+    <div class="ticket">
+        <table>
+            <tr colspan="2">
+                <th>Normal Train Ticket</th>
+            
+            <tr>
+                <th>From</th>
+                <th>To</th>
+            </tr>
+            <tr>
+                <td id="from"></td>
+                <td id="to"></td>
+            </tr>        
+            <tr>
+                <tr>
+                    <th>Adult</th>
+                    <td id="adult"></td>
+                </tr>
+                <tr>
+                    <th>Child</th>
+                    <td id="child"></td>
+                </tr>
+            </tr>
+            <tr>
+                <th>Class</th>
+                <td id="class"></td>
+            </tr>
+            <tr>
+                <th>Return</th>
+                <td id="return"></td>
+            </tr>
 
+            <tr>
+                <th>Price</th>
+                <td id="total"></td>
+            </tr>
+        </tr>
+        </table>
     </div>
+
+    <!-- script link -->
+    <script src="ticket.js"></script>
 </body>
 </html>
