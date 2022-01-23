@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generated Ticket</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="ticket.css">
 </head>
 <body>
-    <header>
-        <p>This Page Get Reset in few minutes</p>
-    </header>
-    <div class="ticket">
+    <!-- <div class="ticket">
         <table>
-            <tr colspan="2">
-                <th>Normal Train Ticket</th>
-            
+            <thead>
+            <tr>
+                <th>Train Type: Normal</th>
+                <td>Ticket No: <label id="randomId"></label></td>
+            </tr>
+            </thead>
+            <tbody>
             <tr>
                 <th>From</th>
                 <th>To</th>
             </tr>
             <tr>
-                <td id="from"></td>
-                <td id="to"></td>
+                <th id="from"></th>
+                <th id="to"></th>
             </tr>        
             <tr>
                 <tr>
@@ -42,15 +44,99 @@
                 <th>Return</th>
                 <td id="return"></td>
             </tr>
-
+            </tbody>
+            <tfoot>
             <tr>
                 <th>Price</th>
                 <td id="total"></td>
             </tr>
-        </tr>
-        </table>
+            </tfoot>
+        </table> -->
+        <div class="template">
+            <div class="header">
+                <i class="fas fa-ticket-alt"></i>
+                <label>Train Ticket</label>
+            </div>
+            <div class="main">
+                <!-- let use grid -->
+                <div class="left">
+                    <div>
+                        <label>CLASS</label>
+                        <div class="box">
+                            <label id="class"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>TICKET TYPE</label>
+                        <div class="box">
+                            <label>Normal</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>DATE</label>
+                        <div class="box">
+                            <label></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>FROM</label>
+                        <div class="box1">
+                            <label id="from"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>TO</label>
+                        <div class="box1">
+                            <label id="to"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <label>ADULT</label>
+                        <div class="box">
+                            <label id="adult"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>CHILD</label>
+                        <div class="box">
+                            <label id="child"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>NUMBER</label>
+                        <div class="box1">
+                            <label id="randomId"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>VALID</label>
+                        <div class="box">
+                            <label id=""></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>PRICE</label>
+                        <div class="box">
+                            <label id="total"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>RETURN</label>
+                        <div class="box">
+                            <label id="return"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        <footer>
+            <a href="/index.html">Click Here to Login Again and Book Tickets</a>
+        </footer>
     </div>
-
+    
     <!-- script link -->
     <script src="ticket.js"></script>
 </body>

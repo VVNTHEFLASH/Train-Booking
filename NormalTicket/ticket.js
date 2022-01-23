@@ -4,7 +4,14 @@
 // content about redirect
 
 // --------------------------------------
-
+let numbers = "1234567890";
+let brand = "BTT";
+let Tid = ""
+for(let i=0;i<7;i++){
+    Tid += numbers[Math.round(Math.random()*(numbers.length-1))];
+}
+let TicketId = document.getElementById("randomId");
+TicketId.innerHTML = brand + Tid;
 // lets get data and make ticket template
 
 let from = localStorage.getItem('from');
