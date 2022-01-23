@@ -4,14 +4,10 @@
 // content about redirect
 
 // --------------------------------------
-let numbers = "1234567890";
-let brand = "BTT";
-let Tid = ""
-for(let i=0;i<7;i++){
-    Tid += numbers[Math.round(Math.random()*(numbers.length-1))];
-}
+let Tid = localStorage.getItem("ticketid");
 let TicketId = document.getElementById("randomId");
-TicketId.innerHTML = brand + Tid;
+
+TicketId.innerHTML = Tid;
 // lets get data and make ticket template
 
 let from = localStorage.getItem('from');
@@ -34,7 +30,7 @@ Tchild.innerHTML = child;
 
 // class and return goes tricky
 let Class = localStorage.getItem('class');
-let Return = localStorage.getItem('return');
+let Return = localStorage.getItem('$return');
 
 let Tclass = document.getElementById('class');
 let Treturn = document.getElementById('return');
@@ -47,3 +43,9 @@ let price = localStorage.getItem('total');
 let Total = document.getElementById('total');
 
 Total.innerHTML = price;
+
+//validity
+let valid = localStorage.getItem('valid');
+let validity = document.getElementById('valid');
+
+validity.innerHTML = valid;

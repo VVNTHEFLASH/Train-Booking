@@ -81,11 +81,9 @@ footer{
 }
 .left{
     display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 .right{
     display: grid;
-    grid-template-columns: 1fr 1fr; 
 }
 .left>div>div{
     margin: 15px;

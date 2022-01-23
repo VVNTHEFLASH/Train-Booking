@@ -36,9 +36,13 @@ function bookTickets() {
   }
       if(selectReturn === 1) {
         localStorage.setItem("return",selectReturn);
+        localStorage.setItem("valid","2 day");
+        localStorage.setItem("$return","JOURNEY RETURN");
       }
       else if(selectReturn === 0) {
         localStorage.setItem("return", selectReturn);
+        localStorage.setItem("valid","1 day");
+        localStorage.setItem("$return","NA");
       }
 
 
@@ -48,11 +52,22 @@ function bookTickets() {
   localStorage.setItem("adult",adult);
   localStorage.setItem("child",child);
 
+  generateTID()
 }
-
+function generateTID(){
+  let numbers = "1234567890";
+  let brand = "BTT";
+  let Tid = ""
+  for(let i=0;i<7;i++){
+      Tid += numbers[Math.round(Math.random()*(numbers.length-1))];
+  }
+  let IdTicket = Tid.innerHTML = brand+Tid;
+  
+  localStorage.setItem('ticketid',IdTicket);
+}
 function storedData() {
-  let $from = localStorage.getItem("from");
-  let $to = localStorage.getItem("to")
+  // let $from = localStorage.getItem("from");
+  // let $to = localStorage.getItem("to");
   let $A = parseInt(localStorage.getItem("adult"));
   let $B = parseInt(localStorage.getItem("child"));
   let $C = parseInt(localStorage.getItem("class"));
@@ -94,7 +109,6 @@ function storedData() {
   }
   localStorage.setItem("total",total)
 }
-storedData();
 //back page
 const backBtn = document.getElementById("backbtn");
 backBtn.onclick = backPage;
@@ -108,5 +122,6 @@ function backPage() {
 
 function submitPage() {
   bookTickets();
+  storedData();
   window.location.href = "./ticket.html";
 }
