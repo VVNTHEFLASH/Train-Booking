@@ -29,7 +29,7 @@ Tadult.innerHTML = adult;
 Tchild.innerHTML = child;
 
 // class and return goes tricky
-let Class = localStorage.getItem('class');
+let Class = localStorage.getItem('$class');
 let Return = localStorage.getItem('$return');
 
 let Tclass = document.getElementById('class');
@@ -49,3 +49,9 @@ let valid = localStorage.getItem('valid');
 let validity = document.getElementById('valid');
 
 validity.innerHTML = valid;
+
+//date
+let date = localStorage.getItem('date');
+let $date = document.getElementById('date');
+
+$date.innerHTML = date;

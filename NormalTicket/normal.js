@@ -22,9 +22,11 @@ function bookTickets() {
   }
       if(select === 1){
         localStorage.setItem("class",select);
+        localStorage.setItem("$class","FC");
       }
       else if(select === 2) {
-        localStorage.setItem("class",select);      
+        localStorage.setItem("class",select);  
+        localStorage.setItem("$class","SC");
       }
   //Return Select
   let Return = document.getElementsByName('ret');
@@ -52,7 +54,9 @@ function bookTickets() {
   localStorage.setItem("adult",adult);
   localStorage.setItem("child",child);
 
-  generateTID()
+  generateTID();
+  TodayDate();
+
 }
 function generateTID(){
   let numbers = "1234567890";
@@ -124,4 +128,11 @@ function submitPage() {
   bookTickets();
   storedData();
   window.location.href = "./ticket.html";
+}
+
+//get the date:
+function TodayDate() {
+  let date = document.getElementById('date').value;
+
+  localStorage.setItem("date",date);
 }
