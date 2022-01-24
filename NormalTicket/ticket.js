@@ -55,3 +55,8 @@ let date = localStorage.getItem('date');
 let $date = document.getElementById('date');
 
 $date.innerHTML = date;
+
+//let add download pdf feature or print page feature
+setTimeout(()=>{
+    window.print();
+},5000)
