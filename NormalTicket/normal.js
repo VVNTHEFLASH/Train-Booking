@@ -62,7 +62,7 @@ function generateTID(){
   let numbers = "1234567890";
   let brand = "BTT";
   let Tid = ""
-  for(let i=0;i<7;i++){
+  for(let i=0;i<10;i++){
       Tid += numbers[Math.round(Math.random()*(numbers.length-1))];
   }
   let IdTicket = Tid.innerHTML = brand+Tid;
@@ -135,4 +135,8 @@ function TodayDate() {
   let date = document.getElementById('date').value;
 
   localStorage.setItem("date",date);
+}
+
+function formvalidate() {
+  
 }
