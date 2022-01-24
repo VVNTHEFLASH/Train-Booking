@@ -1,6 +1,6 @@
 function bookTickets() {
   // Get values first
-  //from des  
+  //from des
   let from = document.getElementById('from');
   let selectFrom = from.options[from.selectedIndex].value;
   //to des
@@ -56,7 +56,6 @@ function bookTickets() {
 
   generateTID();
   TodayDate();
-
 }
 function generateTID(){
   let numbers = "1234567890";
@@ -137,6 +136,104 @@ function TodayDate() {
   localStorage.setItem("date",date);
 }
 
-function formvalidate() {
+function formValidate() {
+  //Destination validation
+  let from = document.forms['TicketForm']['from'];
+  let to = document.forms['TicketForm']['to'];
+
+  let errFrom = document.getElementById('errFrom');
+  let errTo = document.getElementById('errTo');
   
+  if(from.value == to.value) {
+    errFrom.innerHTML = "Please Select Correct Destination";
+    errTo.innerHTML = "Please Select Correct Destination";
+    from.focus();
+    to.focus();
+    return false;
+  }
+  else{
+    errFrom.innerHTML = "";
+    errTo.innerHTML = "";
+  }
+
+  if(from.value == ""){
+    errFrom.innerHTML = "Please Select From Destination";
+    from.focus();
+    return false;
+  }
+  else{
+    errFrom.innerHTML = "";
+  }
+  if(to.value == ""){
+    errTo.innerHTML = "Please Select To Destination";
+    to.focus();
+    return false;
+  }
+  else{
+    errTo.innerHTML = "";
+  }
+
+  //adults and child validation
+  let adult = document.forms['TicketForm']['adult'];
+  let child = document.forms['TicketForm']['child'];
+
+  let errAdult = document.getElementById('errAdult');
+  let errChild = document.getElementById('errChild');
+
+  if(adult.value <= 0){
+    errAdult.innerHTML = "Minimum One Adult Required";
+    adult.focus();
+    return false;
+  }
+  else if(adult.value >= 7 ){
+    errAdult.innerHTML = "Maximum 6 adults only allowed per ticket";
+    adult.focus();
+    return false;
+  }
+  else{
+    errAdult.innerHTML = ""
+  }
+
+  if(child.value < 0){
+    errChild.innerHTML = "Set Zero if No Child Required";
+    child.focus();
+    return false;
+  }
+  else if(child.value >= 7){
+    errChild.innerHTML = "Maximum 6 childs only allowed per ticket";
+    child.focus();
+    return false;
+  }
+  else{
+    errChild.innerHTML = ""
+  }
+
+  //Class and Return Validation - Radio button validation
+  let Class = document.forms['TicketForm']['class'];
+
+  let errClass = document.getElementById("errClass");
+
+  if(Class[0].checked == false && Class[1].checked == false){
+    errClass.innerHTML = "Select Any Class Option";
+    Class.focus();
+    return false;
+  }
+  else{
+    errClass.innerHTML = ""
+  }
+
+
+  let Return = document.forms['TicketForm']['return'];
+
+  let errReturn = document.getElementById("errReturn");
+
+  if(Return[0].checked == false && Return[1].checked == false){
+    errReturn.innerHTML = "Select Any Return Option";
+    Return.focus();
+    return false;
+  }
+  else{
+    errReturn.innerHTML = ""
+  }
+  submitPage();
 }

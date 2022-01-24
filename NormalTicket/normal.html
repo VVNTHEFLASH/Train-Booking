@@ -16,35 +16,41 @@
         </div>
         <div class="NormalForm">
             <!-- Create a Form -->
-            <form method="dialog">
+            <form method="dialog" name="TicketForm" onsubmit="return formValidate()">
                 <!-- lets create destination -->
                 <div class="destination">
                     <label id="bold">Destination</label><br>
                     <label>From </label>
-                        <select name="destination" id="from">
-                            <option value="AVADI" name='from' selected>AVADI</option>
+                        <select name="destination" id="from" class="from">
+                            <option value="" disabled="disabled" selected>Select From </option>
+                            <option value="AVADI" name='from'>AVADI</option>
                             <option value="AMBATTUR" name='from'>AMBATTUR</option>
                             <option value="VILLIVAKKAM" name='from'>VILLIVAKKAM</option>
                             <option value="PERAMBUR" name='from'>PERAMBUR</option>
                             <option value="CHENNAI-CENTRAL" name='from'>CHENNAI CENTRAL</option>
                         </select>
                     <label>To</label>
-                    <select name="destination" id="to">
+                    <select name="destination" id="to" class="to">
+                        <option value="" disabled="disabled" selected>Select To </option>
                         <option value="AVADI" name='to'>AVADI</option>
-                        <option value="AMBATTUR" name='to' selected>AMBATTUR</option>
+                        <option value="AMBATTUR" name='to'>AMBATTUR</option>
                         <option value="VILLIVAKKAM" name='to'>VILLIVAKKAM</option>
                         <option value="PERAMBUR" name='to'>PERAMBUR</option>
                         <option value="CHENNAI-CENTRAL" name='to'>CHENNAI CENTRAL</option>
                     </select>
                     <br><br>
+                    <label id="errFrom" class="alert"></label>
+                    <label id="errTo" class="alert"></label>
                 </div>
                 <!-- Other Details -->
                 <div class="travel">
                     <label>Adult</label>
-                    <input type="number" name="numtravel" id="adult" value="1">
+                    <input type="number" name="adult" id="adult" value="1">
+                    <label class="alert" id="errAdult"></label>
 
                     <label>Child</label>
-                    <input type="number" name="numtravel" id="child" value="0">                    
+                    <input type="number" name="child" id="child" value="0">
+                    <label class="alert" id="errChild"></label>
                 </div>
                 <div class="Cls">
                     <label>Class</label><br>
@@ -52,17 +58,21 @@
                     <label>First Class</label><br>
                     <input type="radio" name="class" id="secondclass" value="2">
                     <label>Second Class</label>
+                    <br><br>
+                    <label id="errClass" class="alert"></label>
                 </div>
                 <div class="Rtn">
                     <label>Return</label><br>
-                    <input type="radio" name="ret" id="return" value="1">
+                    <input type="radio" name="return" id="return" value="1">
                     <label>Journey Return</label><br>
-                    <input type="radio" name="ret" id="noreturn" value="0">
+                    <input type="radio" name="return" id="noreturn" value="0">
                     <label>No Return</label>
+                    <br><br>
+                    <label id="errReturn" class="alert"></label>
                 </div>            
                 <div class="button">
                     <input type="date" name="date" id="date" value="2022-01-01">
-                    <input type="submit" value="Book Now" onclick="submitPage()" id="BookNow">
+                    <input type="submit" value="Book Now" id="BookNow">
                 </div>    
             </form>
         </div>

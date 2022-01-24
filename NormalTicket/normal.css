@@ -104,3 +104,21 @@ label{
     color: #fff;
     text-transform: uppercase;
 }
+.alert{
+    color: red;
+    opacity: 0.7;
+}
+#errFrom{
+    float: left;
+    font-size: x-small;
+}
+#errTo{
+    float: right;
+    font-size: x-small;
+}
+#errAdult,#errChild{
+    font-size: x-small;
+}
+#errClass,#errReturn{
+    font-size: x-small;
+}
