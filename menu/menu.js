@@ -18,3 +18,18 @@ superfast.onclick = () => {
 express.onclick = () => {
     window.location.href = "../ExpressTicket/express.html";
 }
+
+//flip click
+let nt = document.querySelector('.nt');
+let st = document.querySelector('.st');
+let et = document.querySelector('.et');
+
+nt.onclick = () => {
+    window.location.href = "../NormalTicket/normal.html";
+}
+st.onclick = () => {
+    window.location.href = "../SuperfastTicket/superfast.html";
+}
+et.onclick = () => {
+    window.location.href = "../ExpressTicket/express.html";
+}

@@ -22,32 +22,21 @@ body::before{
     opacity: 0.4;
     background-image: url('BTT.svg');
     background-repeat: no-repeat;
-    background-size: 1000px ;
+    background-size: 1000px;
     z-index: -1;
+}
+.container>div{
+    margin: 40px;
+    z-index: 1;
 }
 .container div {
     display: flex;
-    margin: 20px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: none 1px ;
+    border: none;
     transition: 1s;
     font-size: 20pt;
-}
-
-.container div:hover {
-    cursor: pointer;
-
-}
-.container div{
-    display: flex;
-    justify-content: center;
-    background: rgb(65, 41, 197);
-    color: #fff;
-    box-shadow: 0 0 20px rgb(65, 41, 197);
-    width: 400px;
-    height: 400px;
 }
 .logout-btn{
     position: absolute;
@@ -66,9 +55,71 @@ body::before{
     cursor: pointer;
     color: black;
 }
-.container div:nth-child(2){
-    background: orangered;
+#normal-train,#superfast-train,#express-train{
+    cursor: pointer;
+    width: 400px;
+    color: #fff;
+    height: 400px;
 }
-.container div:nth-child(3){
-    background: gold;
+#normal-train{
+    background-color: rgb(65, 41, 197);
+    box-shadow: 0 0 10px royalblue;
 }
+#superfast-train{
+    background-color: orangered;
+    box-shadow: 0 0 10px orange;
+}
+#express-train{
+    background-color: gold;
+    box-shadow: 0 0 10px chocolate;
+}
+
+/* For Flip Refered From W3Schools */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; 
+    /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden; 
+    /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+.flip-card-front{
+    width: 400px;
+    height: 400px;
+}
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: grey;
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    color: white;
+    transform: rotateY(180deg);
+    font-family: 'Times New Roman';
+  }
