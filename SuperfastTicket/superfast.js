@@ -60,11 +60,12 @@ function bookTickets() {
 function generateTID(){
   let numbers = "1234567890";
   let brand = "BTT";
-  let Tid = ""
-  for(let i=0;i<10;i++){
+  let Side = "ST";
+  let Tid = "";
+  for(let i=0;i<8;i++){
       Tid += numbers[Math.round(Math.random()*(numbers.length-1))];
   }
-  let IdTicket = Tid.innerHTML = brand+Tid;
+  let IdTicket = Tid.innerHTML = brand+Tid+Side;
   
   localStorage.setItem('ticketid',IdTicket);
 }
