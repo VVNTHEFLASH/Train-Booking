@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+}
+body::before{
+    content: "";
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.4;
+    background-image: url('BTT.svg');
+    background-repeat: no-repeat;
+    background-size: 1000px ;
+    z-index: -1;
+}
+.container{
+    border: solid rgb(65, 41, 197) 6px;
+    background: gainsboro;
+    border-radius: 1%;
+}
+.header{
+    background: rgb(65, 41, 197);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.header>h1{
+    margin-left: 10px;
+}
+.header>button{
+    background: white;
+    color: rgb(65, 41, 197);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+}
+.NormalForm{
+    height: 70vh;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60vh;
+}
+form>div{
+    padding: 10px;
+    border-radius: 5px;
+    background: white;
+}
+#BookNow{
+    border: none;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    background: rgb(65, 41, 197);
+    padding: 8px;
+}
+#BookNow:hover, #backbtn:hover{
+    color: #000;
+}
+#from, #to {
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+    outline: none;
+    background: royalblue;
+    color: #fff;
+}
+input[type = "number"]{
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+    width: 35px;
+    border: none;
+    background: royalblue;
+}
+label{
+    color: royalblue;
+    font-weight: bold;
+}
+#date{
+    background: royalblue;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+.alert{
+    color: red;
+    opacity: 0.7;
+}
+#errFrom{
+    float: left;
+    font-size: x-small;
+}
+#errTo{
+    float: right;
+    font-size: x-small;
+}
+#errAdult,#errChild{
+    font-size: x-small;
+}
+#errClass,#errReturn{
+    font-size: x-small;
+}
