@@ -80,13 +80,13 @@ function storedData() {
   // console.log($from,$to,$A,$B,$C,$R);
   var total = 0;
   // price
-  let A = 10 //If A = 1 then price = 10
-  let C = 5 //If C = 2 then price = 5
+  let A = 40; //If A = 1 then price = 10
+  let C = 20; //If C = 2 then price = 5
   // class price
   //add 10 extra for firstclass
   // for second class add 0 or nothing
-  let FC = 10 //remember to FC to all adults and childs if selected
-  let SC = 0
+  let FC = 40; //remember to FC to all adults and childs if selected
+  let SC = 20;
 
   // Return price
   let JR = total * 2;
