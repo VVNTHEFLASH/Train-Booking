@@ -77,3 +77,16 @@ button:hover{
     font-size: 10pt;
     font-weight: bold;
 }
+
+@media screen and (max-width:768px) {
+    
+    h1{
+        font-size: xx-large;
+    }
+
+    .form-container{
+        font-size: larger;
+        height: 300px;
+    }
+
+}
