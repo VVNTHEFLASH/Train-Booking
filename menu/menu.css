@@ -124,6 +124,23 @@ body::before{
     font-family: 'Times New Roman';
   }
 
-  /* @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
       
-  } */
+    .logout-btn{
+        position: absolute;
+        top: 0;
+        right: 50%;
+        left: 65%;
+    }
+    .container{
+        margin-top: 40px;
+    }
+
+    .flip-card-back>label{
+        font-size: medium;
+    }
+    .flip-card-back>h1{
+        font-size: larger;
+    }
+
+  }

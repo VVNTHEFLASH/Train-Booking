@@ -100,3 +100,14 @@ footer{
     display: grid;
     grid-column: 1/3;
 }
+
+@media screen and (max-width:768px) {
+    
+    .template{
+        transform: rotate(90deg);
+    }
+    footer{
+        width: 100px;
+    }
+
+}
